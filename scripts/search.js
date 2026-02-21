@@ -8,7 +8,7 @@ let puppeteer;
 try {
   puppeteer = require('puppeteer-core');
 } catch {
-  console.error('web-search-google-lite failed: puppeteer-core is not installed.');
+  console.error('web-search-skill failed: puppeteer-core is not installed.');
   process.exit(1);
 }
 
@@ -475,6 +475,6 @@ async function run() {
 
 run().catch((error) => {
   const message = error instanceof Error ? error.message : String(error);
-  process.stderr.write(`web-search-google-lite failed: ${message}\n`);
+  process.stderr.write(`web-search-skill failed: ${message}\n`);
   process.exit(1);
 });
