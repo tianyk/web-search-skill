@@ -15,11 +15,11 @@ try {
 function printHelp() {
   process.stdout.write(
     [
-      'Usage: search.js --keyword "query" [--max-results 10]',
+      'Usage: search.js --keyword "query" [--max-results 5]',
       '',
       'Options:',
       '  --keyword, -k      Search keyword (required)',
-      '  --max-results, -n  Maximum number of results, default 10, max 20',
+      '  --max-results, -n  Maximum number of results, default 5, max 20',
       '  --help, -h         Show this help message',
       '',
       'Example:',
@@ -32,7 +32,7 @@ function printHelp() {
 function parseArgs(argv) {
   const args = argv.slice(2);
   let keyword = '';
-  let maxResults = 10;
+  let maxResults = 5;
 
   for (let i = 0; i < args.length; i += 1) {
     const arg = args[i];
