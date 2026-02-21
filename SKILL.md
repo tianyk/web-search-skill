@@ -1,6 +1,6 @@
 ---
 name: web-search
-description: 使用 Puppeteer 单次启动浏览器执行无服务 Google 网页搜索。适用于需要超出知识截止时间的最新信息。
+description: 轻量级 Google Web 搜索技能。适用于需要超出知识截止时间的最新信息。
 ---
 
 # Web Search
@@ -19,20 +19,20 @@ description: 使用 Puppeteer 单次启动浏览器执行无服务 Google 网页
 ## 输入约定
 
 - 必填：搜索关键词字符串。
-- 可选：`max-results`（默认 `10`，最大 `20`）。
+- 可选：`max-results`（默认 `5`，最大 `20`）。
 
 ## 执行流程（Agent）
 
 1. 确保依赖已安装：
 
 ```bash
-cd "$SKILLS_ROOT/web-search-google-lite"
+cd "$SKILLS_ROOT/web-search-skill"
 ```
 
 2. 直接执行搜索（无需包装脚本）：
 
 ```bash
-node "$SKILLS_ROOT/web-search-google-lite/scripts/search.js" --keyword "your query" --max-results 10
+node "$SKILLS_ROOT/web-search-skill/scripts/search.js" --keyword "your query" --max-results 5
 ```
 
 3. 将 stdout 的 Markdown 作为标准结果读取。
@@ -66,5 +66,5 @@ node "$SKILLS_ROOT/web-search-google-lite/scripts/search.js" --keyword "your que
 - 不需要后台服务。
 - 依赖：`puppeteer-core`。
 - 浏览器 profile 复用路径：
-  - `"$SKILLS_ROOT/web-search-google-lite/.runtime/chrome-profile"`
+  - `"$SKILLS_ROOT/web-search-skill/.runtime/chrome-profile"`
 - 始终使用非无头模式（有界面浏览器）。
