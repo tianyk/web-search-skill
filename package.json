@@ -1,0 +1,10 @@
+{
+  "name": "web-search-skill",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A web search skill using Puppeteer",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer-core": "^24.4.0"
+  }
+}
