@@ -33,6 +33,6 @@ node scripts/search.js --keyword "TypeScript tutorial" --max-results 10
 
 ## 补充说明
 
-- 默认非无头运行；可通过 `WEB_SEARCH_HEADLESS=1` 开启无头模式。
+- 始终使用非无头模式（有界面浏览器）。
 - 浏览器 profile 会持久化在 `.runtime/chrome-profile`，用于复用会话状态。
 - 面向 Agent 的详细执行规范见 `SKILL.md`。

@@ -142,8 +142,9 @@ function getChromePath() {
 
 function resolveHeadless() {
   const override = (process.env.WEB_SEARCH_HEADLESS || '').trim().toLowerCase();
-  if (override === '1' || override === 'true' || override === 'yes') return true;
-  if (override === '0' || override === 'false' || override === 'no') return false;
+  if (override === '1' || override === 'true' || override === 'yes') {
+    process.stderr.write('WEB_SEARCH_HEADLESS is ignored; browser always runs in non-headless mode.\n');
+  }
   return false;
 }
 

@@ -67,4 +67,4 @@ node "$SKILLS_ROOT/web-search-google-lite/scripts/search.js" --keyword "your que
 - 依赖：`puppeteer-core`。
 - 浏览器 profile 复用路径：
   - `"$SKILLS_ROOT/web-search-google-lite/.runtime/chrome-profile"`
-- 默认使用非无头模式，除非显式设置 `WEB_SEARCH_HEADLESS`。
+- 始终使用非无头模式（有界面浏览器）。
